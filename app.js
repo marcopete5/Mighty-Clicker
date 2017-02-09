@@ -3,8 +3,12 @@ var app = angular.module('clickApp', []);
 app.controller('mainController', ['$scope', '$http', 'redService', 'blueService', function ($scope, $http, redService, blueService){
 
 
+$scope.redCounter = 100//redService.redCounter;
+
+$scope.blueCounter = 100//blueService.blueCounter;
 
 $scope.changeBlue = function(blue, red){
+
 	var newRed = redService.decrementRed(red);
 	var newBlue = blueService.incrementBlue(blue);
 	if (newRed === 0){

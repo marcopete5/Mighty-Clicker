@@ -1,20 +1,26 @@
 angular.module('clickApp')
 
 .service('redService', [function () {
+		// var self = this;
+		// self.redCounter = 100
 
-		var redCounter = 100
-
-		this.incrementRed = function(){
-				return redCounter++;
+		this.incrementRed = function(red){
+				// self.redCounter++;
+				// return self.redCounter
+				red++;
+				return red;
 		};	
 
-		this.decrementRed = function(){
-				return redCounter--;
+		this.decrementRed = function(red){
+				// self.redCounter--;
+				// return self.redCounter
+				red--;
+				return red;
 		};
 		
-		this.resetRed = function(){
-				return redCounter = 100;
-				
+		this.resetRed = function(red){
+				// return self.redCounter = 100;
+				return red = 100;
 		};
 	
 }]);

@@ -2,18 +2,21 @@ angular.module('clickApp')
 
 .service('blueService', [function () {
 
-		var blueCounter = 100
+		var self = this;
+		self.blueCounter = 100
 
 		this.incrementBlue = function(){
-				return blueCounter++;
+				self.blueCounter++;
+				return self.blueCounter;
 		};	
 
 		this.decrementBlue = function(){
-				return blueCounter--;
+				self.blueCounter--;
+				return self.blueCounter
 		};
 		
 		this.resetBlue = function(){
-					return blueCounter = 100;
+					return self.blueCounter = 100;
 				
 		};
 	
